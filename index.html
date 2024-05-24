@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Sorting Visualizer</title>
+    <style>
+      canvas {
+        display: block;
+        margin: 0 auto;
+        border-radius: 20px;
+        box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.1);
+        background-color: #9dde8b;
+      }
+      .controls {
+        text-align: center;
+        margin: 20px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+      }
+      button {
+        margin: 5px;
+        padding: 10px 20px;
+        font-size: 16px;
+        background-color: #f9f9f9;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.1);
+      }
+      body {
+        background-color: #d9edbf;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+      }
+      .header {
+        text-align: center;
+        margin-bottom: 10px;
+      }
+      h2 {
+        font-size: 40px;
+        color: #333;
+
+        font-weight: 700;
+      }
+      .container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 15px;
+        justify-content: center;
+        text-align: center; /* Add this line to center the content horizontally */
+      }
+      @media screen and (max-width: 1600px) {
+        .container {
+          flex-direction: column;
+        }
+        canvas {
+          width: 100%;
+          height: 500px;
+        }
+        .controls {
+          flex-direction: column;
+        }
+        button {
+          width: 100%;
+        }
+        h2 {
+          font-size: 30px;
+        }
+        p {
+          font-size: 16px;
+        }
+      }
+      p {
+        font-size: 18px;
+        color: #555;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <h2>
+        Sorting Visualizer
+        <span style="font-size: 20px; color: #555">
+          (Bubble, Selection, Insertion, Merge, Quick, Heap)
+        </span>
+      </h2>
+      <p>
+        Click on the buttons below to visualize different sorting algorithms.
+      </p>
+    </div>
+    <div class="container">
+      <div class="controls">
+        <button onclick="randomizeArray()">Randomize Array</button>
+        <button onclick="selectionSort()">Selection Sort</button>
+        <button onclick="insertionSort()">Insertion Sort</button>
+        <button onclick="bubbleSort()">Bubble Sort</button>
+        <button onclick="mergeSortWrapper()">Merge Sort</button>
+        <button onclick="quickSortWrapper()">Quick Sort</button>
+        <button onclick="heapSort()">Heap Sort</button>
+      </div>
+      <canvas id="canvas" width="910" height="750"></canvas>
+    </div>
+    <script src="sortingVisualizer.js"></script>
+  </body>
+</html>
