@@ -20,9 +20,6 @@ This project demonstrates the implementation of various data structures and algo
   - [HashMap](#hashmap-example)
   - [Heap](#heap-example)
   - [Graph](#graph-example)
-- [Installation](#installation)
-- [Contributing](#contributing)
-- [License](#license)
 
 ## Introduction
 
