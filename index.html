@@ -89,17 +89,45 @@
       </p>
     </div>
     <div class="container">
-      <div class="controls">
+      <div>
+        <h1>Controls</h1>
+        <p style="font-size: smaller">
+          (Randomize Array) - After randomizing, click on the sorting algorithm
+          buttons to visualize them.
+        </p>
         <button onclick="randomizeArray()">Randomize Array</button>
-        <button onclick="selectionSort()">Selection Sort</button>
-        <button onclick="insertionSort()">Insertion Sort</button>
-        <button onclick="bubbleSort()">Bubble Sort</button>
-        <button onclick="mergeSortWrapper()">Merge Sort</button>
-        <button onclick="quickSortWrapper()">Quick Sort</button>
-        <button onclick="heapSort()">Heap Sort</button>
+        <p>Sorting Algorithms</p>
+        <div class="controls">
+          <button onclick="selectionSort()">Selection Sort</button>
+          <button onclick="insertionSort()">Insertion Sort</button>
+          <button onclick="bubbleSort()">Bubble Sort</button>
+          <button onclick="mergeSortWrapper()">Merge Sort</button>
+          <button onclick="quickSortWrapper()">Quick Sort</button>
+          <button onclick="heapSort()">Heap Sort</button>
+        </div>
       </div>
       <canvas id="canvas" width="910" height="750"></canvas>
     </div>
     <script src="sortingVisualizer.js"></script>
+    <script type="module">
+      // Import the functions you need from the SDKs you need
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.1/firebase-app.js";
+      // TODO: Add SDKs for Firebase products that you want to use
+      // https://firebase.google.com/docs/web/setup#available-libraries
+
+      // Your web app's Firebase configuration
+      const firebaseConfig = {
+        apiKey: "AIzaSyAIT_zJqdT9A8oGARoQ7OmzTwb2RlolHM8",
+        authDomain: "react-http-98d20.firebaseapp.com",
+        databaseURL: "https://react-http-98d20-default-rtdb.firebaseio.com",
+        projectId: "react-http-98d20",
+        storageBucket: "react-http-98d20.appspot.com",
+        messagingSenderId: "971850644912",
+        appId: "1:971850644912:web:071bd2c5a8a98536d0ea75",
+      };
+
+      // Initialize Firebase
+      const app = initializeApp(firebaseConfig);
+    </script>
   </body>
 </html>
